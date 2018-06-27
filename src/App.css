@@ -1,0 +1,192 @@
+*{
+  font-family: helvetica Neuve, sans-serif;
+  font-weight: 300;
+}
+body{
+  background-color: #454E57;
+  color:white;
+}
+h1,h3, h5{
+  font-weight: 500;
+  color:#FBFFFF
+}
+header{
+  text-align: center;
+}
+input,textarea{
+  font-size: 100%;
+  font-weight: 300;
+}
+.margin-right{
+  margin-right:1%;
+}
+ul{
+  display:flex;
+  justify-content: space-around;
+  padding:30px;
+}
+li{
+  list-style-type: none;
+}
+li a{
+  color:white;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: #0B5A7B;
+  padding:15px;
+  border: 1px solid white;
+}
+#container{
+ display: block;
+ width:60%;
+ margin: auto;
+ box-sizing: border-box;
+}
+#checkboxWrapper{
+  display:flex;
+}
+#sideCheckbox{
+  margin-left: 50px;
+  
+}
+#radioButtons{
+  width:100%;
+  text-align:center;
+}
+.formHeadings{
+  border-bottom: 3px solid #0B5A7B;
+}
+.formSection{
+  margin-top:15px;
+}
+.split{
+  width:90%;
+}
+input{
+  border:none;
+  background-color: #454E57;
+  border-bottom: 1px solid #78818A;
+  outline: none;
+}
+.nameDiv{
+  width:69%
+}
+.phoneDiv{
+  width:38%
+}
+.height{
+  height:40px
+}
+input[name="fullName"]{
+  width:100%;
+}
+input[name="phone"]{
+  width:100%;
+}
+input[name="email"]{
+  width:70%;
+}
+input[name="emailAgain"]{
+  width:70%;
+}
+input[name="address"]{
+  width:100%;
+  margin-top: 30px;
+}
+input[name="howDidYouHearAboutUs"]{
+  width:100%;
+  margin-top: 30px;
+}
+#radioButtons label{
+  background-color: #48515A;
+  border: 1px solid #A5AAB0;
+  padding:15px;
+  cursor: pointer;
+}
+#radioButtons{
+  display:flex;
+  width:100%;
+  justify-content: space-between;
+}
+input[type="radio"]{
+  display:none;
+}
+#radioButtons input:checked + label{
+  background-color: #0AA8E5;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+label {
+cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+border: 1px solid #A5AAB0;
+content: "\00a0";
+display: inline-block;
+height: 16px;
+margin: 0 10px 0 0;
+padding: 0;
+vertical-align: top;
+width: 16px;
+}
+input[type="checkbox"]:checked + label:before {
+  background: #48515A;
+  color: #A5AAB0;;
+  content: "\2713";
+  text-align: center;
+  margin-right:10px;
+}
+input[name="portfolioLink"]{
+    width: 100%;
+}
+textarea{
+    width:100%;
+    background: #48515A;
+}
+input,textarea{
+    color:white;
+    outline:none;
+}
+#submitButton{
+    margin: 30px 0;
+    background-color:#0AA8E5; 
+    border: 1px solid #A5AAB0;
+    padding:10px;
+    cursor: pointer;
+    width:150px;
+    font-size: 15px;
+    color:white;
+    outline:none;
+}
+
+.align{
+  text-align: center;
+  
+  width:100%;
+}
+.invalid{
+  border-color: red;
+}
+.show{
+  display:block;
+}
+.hide{
+  display:none;
+}
+.flex{
+  display:flex; 
+}
+.margin{
+  margin-bottom:30px;
+}
+.err-msg{
+  display: block;
+  font-size: 10px;
+  color:white;
+}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
