@@ -144,6 +144,9 @@ textarea{
     width:100%;
     background: #48515A;
 }
+#textArea{
+  margin-top: 20px;
+}
 input,textarea{
     color:white;
     outline:none;

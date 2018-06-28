@@ -24,11 +24,11 @@ class Portfolio extends React.Component {
     }
     handleSubmit = (e) =>{
         e.preventDefault();
-        alert('Form is submited')
         this.setState({
             portfolioLink:'',
             textArea:''
         })
+        alert("Form is submited")
     }
     isTouched = (e) => {
         const name = e.target.name;
@@ -65,8 +65,9 @@ class Portfolio extends React.Component {
                                     onChange={this.handleChange}
                                     className = {errors.portfolio && isTouched.portfolioLink  ? 'invalid' : ''}
                                     onBlur={this.isTouched}
-                            /><br /><div className='err-msg margin'>{errors.portfolio}</div>
+                            /><br />{errors.portfolio   && isTouched ? <div className='err-msg'>{errors.portfolio}</div> : ''}
                             <textarea 
+                                    id='textArea'
                                     rows="5" cols="50"
                                     placeholder="Anything else(another link, availability, ect.)?"  
                                     value={textArea} 
@@ -77,7 +78,7 @@ class Portfolio extends React.Component {
                             
                         </div>
                 </div>
-                <button type="submit" class={this.isSubmitDisabled(errors) ? "disabled" : "submitButton"} disabled={this.isSubmitDisabled(errors)}>Submit</button>
+                <button type="submit" className={this.isSubmitDisabled(errors) ? "disabled" : "submitButton"} disabled={this.isSubmitDisabled(errors)}>Submit</button>
          </form>
         )
     }  

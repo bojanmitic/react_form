@@ -56,7 +56,7 @@ class Skills extends React.Component {
                 })
                 
                 this.setState({
-                        selectedOption: '',
+                        selectedOption:'',
                         experience:{
                              visualDesign_check:false,
                              uxDesign_check:false,
