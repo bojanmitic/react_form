@@ -24,6 +24,7 @@ class Portfolio extends React.Component {
     }
     handleSubmit = (e) =>{
         e.preventDefault();
+        alert('Form is submited')
         this.setState({
             portfolioLink:'',
             textArea:''
@@ -36,6 +37,9 @@ class Portfolio extends React.Component {
                 ...prevState.isTouched,[name]:true 
             }
         }))
+    }
+    isSubmitDisabled = (errors)=>{
+        return Object.values(errors).some(errMsg=>errMsg);
     }
     render(){
         const {portfolioLink, textArea, isTouched} = this.state;
@@ -73,7 +77,7 @@ class Portfolio extends React.Component {
                             
                         </div>
                 </div>
-                <button type="submit" id="submitButton">Submit</button>
+                <button type="submit" class={this.isSubmitDisabled(errors) ? "disabled" : "submitButton"} disabled={this.isSubmitDisabled(errors)}>Submit</button>
          </form>
         )
     }  

@@ -210,7 +210,7 @@ class PersonalInfo extends React.Component{
                                         />
                                 </div> 
                             </div>
-                            <button type="submit" id="submitButton" disabled={this.isSubmitDisabled(errors)}>Submit</button>
+                            <button type="submit" className = {this.isSubmitDisabled(errors) ? 'disabled' : 'submitButton'} disabled={this.isSubmitDisabled(errors)}>Submit</button>
                         </form>
                     )
         }

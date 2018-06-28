@@ -54,6 +54,7 @@ class Skills extends React.Component {
                 this.setState({
                 isChecked:!(expValues && locationValues)
                 })
+                
                 this.setState({
                         selectedOption: '',
                         experience:{
@@ -72,10 +73,9 @@ class Skills extends React.Component {
                                 else:false 
                         }
                 })  
-                
         } 
         render(){
-                console.log(this.state)
+                const {selectedOption} = this.state;
                 return (
                         <form onSubmit={this.handleSubmit}>
                         <div className="formSection">
@@ -223,7 +223,7 @@ class Skills extends React.Component {
                                     {!this.state.isChecked ?<div className="err-msg align">Please select at least one option</div> :''}
                                 </div>
                             </div> 
-                            <button type="submit" id="submitButton">Submit</button>
+                            <button type="submit" className={selectedOption ?'submitButton': 'disabled' }>Submit</button>
                        </form>   
                     )
         }

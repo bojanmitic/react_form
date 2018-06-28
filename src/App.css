@@ -148,7 +148,7 @@ input,textarea{
     color:white;
     outline:none;
 }
-#submitButton{
+.submitButton{
     margin: 30px 0;
     background-color:#0AA8E5; 
     border: 1px solid #A5AAB0;
@@ -188,5 +188,16 @@ input,textarea{
 .grid{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
+}
+.disabled{
+  margin: 30px 0;
+    background-color:#b3bac6; 
+    border: 1px solid #A5AAB0;
+    padding:10px;
+    cursor: pointer;
+    width:150px;
+    font-size: 15px;
+    color:white;
+    outline:none;
 }
 
